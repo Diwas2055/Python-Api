@@ -22,7 +22,7 @@ def get_method():
     print(""" GET METHOD """)
 
 
-get_method()
+# get_method()
 
 # *** POST METHOD ***
 
@@ -44,7 +44,7 @@ def post_method():
     print(""" POST METHOD """)
 
 
-post_method()
+# post_method()
 
 # *** PUT / PATCH  METHOD ***
 
@@ -65,7 +65,7 @@ def put_method():
     print(""" PUT / PATCH METHOD """)
 
 
-put_method()
+# put_method()
 
 
 # *** DELETE METHOD ***
@@ -84,4 +84,31 @@ def delete_method():
     print(""" DELETE METHOD """)
 
 
-delete_method()
+# delete_method()
+
+response = requests.get("https://jsonplaceholder.typicode.com/todos")
+def response_method():
+    # It's returning a list of all the attributes and methods of the response object.
+    dir(response)
+    
+    # It's returning the response body as a string.
+    response.text 
+    
+    # It's returning the response body as a byte string.
+    response.content 
+    
+    # It's writing the response content to a file called comic.png.
+    with open('comic.png','wb') as f:
+        f.write(response.content)
+
+    # It's returning the response headers as a dictionary.
+    response.headers
+    
+
+def parameters_method():
+    """
+    The function parameters_method() makes a GET request to the URL https://httpbin.org/get, and passes
+    the parameters page=2 and count=25 in the query string.
+    """
+    payload={'page':2,'count':25}
+    response=requests.get("https://httpbin.org/get",params=payload)
