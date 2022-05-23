@@ -2,6 +2,11 @@ import requests
 import os
  
 def send_data_to_server(image_path):
+    """
+    It takes an image path as input, creates a multipart form data object, and sends it to the server
+    
+    :param image_path: The path to the image file
+    """
          
     image_filename = os.path.basename(image_path)
  
