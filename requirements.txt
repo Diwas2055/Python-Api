@@ -1,7 +1,13 @@
 backoff==2.0.1
 certifi==2022.5.18.1
 charset-normalizer==2.0.12
+ecdsa==0.17.0
 idna==3.3
+pyasn1==0.4.8
+python-jose==3.3.0
+python-keycloak==1.1.1
 ratelimit==2.2.1
 requests==2.27.1
+rsa==4.8
+six==1.16.0
 urllib3==1.26.9
